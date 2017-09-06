@@ -55,7 +55,6 @@ $(document).ready(function() {
     event.preventDefault();
     var simpleCalculator = new Calculator("neon");
     var operation = $(this).find("button[type=submit]:focus").val();
-    console.log(operation);
     var num1 = parseInt($('#num').val());
     var num2 = parseInt($('#num2').val());
     var output = 0;
@@ -86,6 +85,10 @@ $(document).ready(function(){
     $('#signup').hide();
     $('#solution').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
   });
+});
+
+$(document).ready(function(){
+  $('#time').text(moment());
 });
 
 },{"./../js/pingpong.js":1}]},{},[2]);
